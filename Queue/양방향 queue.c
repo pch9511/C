@@ -111,7 +111,7 @@ int Ldelque(){
 	
 	p=rear->Llink;
 	if(rear->Llink==NULL){
-		printf("»èÁ¦ÇÒ µ¥ÀÌÅÍ ¾øÀ½\n"); 
+		printf("ì‚­ì œí•  ë°ì´í„° ì—†ìŒ\n"); 
 		return;
 	}
 	else if(front->Rlink==rear->Llink){
@@ -137,7 +137,7 @@ int Rdelque(){
 	
 	p=front->Rlink;
 	if(front->Rlink==NULL){
-		printf("»èÁ¦ÇÒ µ¥ÀÌÅÍ ¾øÀ½\n"); 
+		printf("ì‚­ì œí•  ë°ì´í„° ì—†ìŒ\n"); 
 		return;
 	}
 	else if(front->Rlink==rear->Llink){
