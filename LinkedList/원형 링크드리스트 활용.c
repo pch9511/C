@@ -17,8 +17,8 @@ int check(NODE *,char);
 void print(NODE *);
 void del(NODE *);
 
-//33°Ç -> countNODE ,addNODE, Áßº¹Ã¼Å©(checkNODE) , struct -> int 1~33 ÀÚµ¿Áõ°¡ ,char ´ë¼Ò¹®ÀÚ Æ÷ÇÔ 33°Ç -> ex)h->[1,c]->[2,k]->[3,u] printNode 
-//deletenode h°¡ °¡¸£Å°´Â ¾ê¸¦ Áö¿ì°í h´Â µÎÄ­¾¿ ¿Å±â±â ²¿¸®´Â ´ÙÀ½À¸·Î ¸î¹øÀ» Áö¿ìµç ¶È°°Àº ¹øÈ£°¡ 2°³ ³²¾Æ¾ßÇÔ   
+//33ê±´ -> countNODE ,addNODE, ì¤‘ë³µì²´í¬(checkNODE) , struct -> int 1~33 ìë™ì¦ê°€ ,char ëŒ€ì†Œë¬¸ì í¬í•¨ 33ê±´ -> ex)h->[1,c]->[2,k]->[3,u] printNode 
+//deletenode hê°€ ê°€ë¥´í‚¤ëŠ” ì–˜ë¥¼ ì§€ìš°ê³  hëŠ” ë‘ì¹¸ì”© ì˜®ê¸°ê¸° ê¼¬ë¦¬ëŠ” ë‹¤ìŒìœ¼ë¡œ ëª‡ë²ˆì„ ì§€ìš°ë“  ë˜‘ê°™ì€ ë²ˆí˜¸ê°€ 2ê°œ ë‚¨ì•„ì•¼í•¨   
 
 int main(int argc, char *argv[]) {
 	
@@ -129,7 +129,7 @@ void print(NODE *h){
 	
 	p=h;
 	if(p->link==NULL){
-		printf("°ªÀÌ ¾ø½À´Ï´Ù.\n"); 
+		printf("ê°’ì´ ì—†ìŠµë‹ˆë‹¤.\n"); 
 		return;	
 	}
 	else{
