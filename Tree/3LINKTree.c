@@ -20,11 +20,11 @@ int main(int argc, char *argv[]) {
 	
 	T=create();
 	while(1){
-		printf("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		printf("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		scanf("%d",&i);
 		if(i==-1) break; 
 		if(check(T,i)==-1){
-			printf("Áßº¹ÀÔ´Ï´Ù.\n");
+			printf("ì¤‘ë³µì…ë‹ˆë‹¤.\n");
 		}
 		else{
 			insert(T,i);
