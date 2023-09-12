@@ -15,10 +15,10 @@ void inorder(tree *);
 void preorder(tree *);
 void postorder(tree *);
 int countnode(tree *);
-//µ¥ÀÌÅÍ 1 L R ÇÏ³ª¾¿ ¸µÅ© create Á¦¿Ü ¸ğµÎ Àç±Í 
-//insert(»ğÀÔ) ,create(µ¿ÀûÇÒ´ç)->°ªÀÌ =0 
-//exinsert(T,10) h->data°¡ 0ÀÌ¸é ´ëÀÔ  
-//inorder(T)¿Ş·ç¿À ¿ì¼±À¸·Î  preorder(T)·ç¿Ş¿À  postorder(T)¿Ş¿À·ç 
+//ë°ì´í„° 1 L R í•˜ë‚˜ì”© ë§í¬ create ì œì™¸ ëª¨ë‘ ì¬ê·€ 
+//insert(ì‚½ì…) ,create(ë™ì í• ë‹¹)->ê°’ì´ =0 
+//exinsert(T,10) h->dataê°€ 0ì´ë©´ ëŒ€ì…  
+//inorder(T)ì™¼ë£¨ì˜¤ ìš°ì„ ìœ¼ë¡œ  preorder(T)ë£¨ì™¼ì˜¤  postorder(T)ì™¼ì˜¤ë£¨ 
 
 int main(int argc, char *argv[]) {
 	
