@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-//1. µî·Ï(add/insert -> dvd¸í ±âÁØ ¿À¸§Â÷¼ø 5°ÇÀÌÇÏ -> countnode) 2. Á¶È¸ (1. DVD¸í 2. ÁÖ¿¬¹è¿ì 3. Á¦ÀÛ»ç ==> ±âÁØÀ¸·Î ¿À¸§Â÷¼ø) 3. ¼öÁ¤(DVD ¸í °Ë»öÈÄ ¼öÁ¤ ) 4. »èÁ¦ (°Ë»öÈÄ »èÁ¦ ) 5. Á¾·á
-//DVD ±¸Á¶Ã¼ -> dvd¸í Àå¸£ ½Ã°£ ÁÖ¿¬ °¨µ¶ Á¦ÀÛ»ç DVD µî·Ï¹øÈ£(Áßº¹X)   ÀüºÎ ÆÄÀÏ·Î ±â·Ï 
+//1. ë“±ë¡(add/insert -> dvdëª… ê¸°ì¤€ ì˜¤ë¦„ì°¨ìˆœ 5ê±´ì´í•˜ -> countnode) 2. ì¡°íšŒ (1. DVDëª… 2. ì£¼ì—°ë°°ìš° 3. ì œì‘ì‚¬ ==> ê¸°ì¤€ìœ¼ë¡œ ì˜¤ë¦„ì°¨ìˆœ) 3. ìˆ˜ì •(DVD ëª… ê²€ìƒ‰í›„ ìˆ˜ì • ) 4. ì‚­ì œ (ê²€ìƒ‰í›„ ì‚­ì œ ) 5. ì¢…ë£Œ
+//DVD êµ¬ì¡°ì²´ -> dvdëª… ì¥ë¥´ ì‹œê°„ ì£¼ì—° ê°ë… ì œì‘ì‚¬ DVD ë“±ë¡ë²ˆí˜¸(ì¤‘ë³µX)   ì „ë¶€ íŒŒì¼ë¡œ ê¸°ë¡ 
 typedef struct REGI{
 	char name[20];
 	char genre[20];
@@ -93,7 +93,7 @@ int main_select(){
 	
 	int i;
 	
-	printf("1. µî·Ï 2. Á¶È¸ 3. ¼öÁ¤ 4. »èÁ¦ 5. Á¾·á\n->");
+	printf("1. ë“±ë¡ 2. ì¡°íšŒ 3. ìˆ˜ì • 4. ì‚­ì œ 5. ì¢…ë£Œ\n->");
 	scanf("%d",&i); 
 	
 	return i;	
@@ -127,23 +127,23 @@ DVD *create(){
 }
 void regist(DVD *h,REG *n){
 	
-	printf("DVD ¸í : ");
+	printf("DVD ëª… : ");
 	scanf("%s",n->name);
-	printf("Àå¸£ : ");
+	printf("ì¥ë¥´ : ");
 	scanf("%s",n->genre);
-	printf("½Ã°£ : ");
+	printf("ì‹œê°„ : ");
 	scanf("%s",n->time);
-	printf("ÁÖ¿¬ : ");
+	printf("ì£¼ì—° : ");
 	scanf("%s",n->actor);
-	printf("°¨µ¶ : ");
+	printf("ê°ë… : ");
 	scanf("%s",n->direc);
-	printf("Á¦ÀÛ»ç  : ");
+	printf("ì œì‘ì‚¬  : ");
 	scanf("%s",n->company);
 	while(1){
-		printf("µî·Ï¹øÈ£ : ");
+		printf("ë“±ë¡ë²ˆí˜¸ : ");
 		scanf("%d",&n->num);
 		if(check(n->num,h)==-1){
-			printf("ÀÌ¹Ì Á¸ÀçÇÏ´Â µî·Ï¹øÈ£ÀÔ´Ï´Ù.\n");
+			printf("ì´ë¯¸ ì¡´ì¬í•˜ëŠ” ë“±ë¡ë²ˆí˜¸ì…ë‹ˆë‹¤.\n");
 		}
 		else{
 			break;
@@ -225,7 +225,7 @@ void file(DVD *h){
 	
 	ifp=fopen("DVDLIST.txt","w");
 		if(ifp==NULL){
-			printf("ÆÄÀÏ °³¹æ ½ÇÆĞ\n");
+			printf("íŒŒì¼ ê°œë°© ì‹¤íŒ¨\n");
 		}
 	p=h;
 	while(p->link!=NULL){
@@ -259,7 +259,7 @@ void view(DVD *h){
 	p=h;
 	while(p->link!=NULL){
 		p=p->link;
-		printf("DVD ¸í : %s Àå¸£ : %s ½Ã°£ : %s ÁÖ¿¬ : %s °¨µ¶ : %s Á¦ÀÛ»ç : %s µî·Ï¹øÈ£ : %d\n",p->data.name,p->data.genre,p->data.time,p->data.actor,p->data.direc,p->data.company,p->data.num);
+		printf("DVD ëª… : %s ì¥ë¥´ : %s ì‹œê°„ : %s ì£¼ì—° : %s ê°ë… : %s ì œì‘ì‚¬ : %s ë“±ë¡ë²ˆí˜¸ : %d\n",p->data.name,p->data.genre,p->data.time,p->data.actor,p->data.direc,p->data.company,p->data.num);
 	}
 }
 
@@ -291,7 +291,7 @@ int searchmenu_select(){
 	
 	int i;
 	
-	printf("1. DVD 2. ÁÖ¿¬¹è¿ì 3. Á¦ÀÛ»ç 4.³ª°¡±â\n->");
+	printf("1. DVD 2. ì£¼ì—°ë°°ìš° 3. ì œì‘ì‚¬ 4.ë‚˜ê°€ê¸°\n->");
 	scanf("%d",&i); 
 	
 	return i;
@@ -302,7 +302,7 @@ void dvdname(DVD *h){
 	DVD *p,*o,*temp;
 	char name[20];	
 
-	printf("Ã£À» DVD¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ì°¾ì„ DVDëª…ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 	scanf("%s",name); 
 	
 	p=h;
@@ -330,7 +330,7 @@ void dvdview(DVD *h,char *name){
 	while(p->link!=NULL){
 		p=p->link;
 		if(strcmp(p->data.name,name)==0){
-			printf("DVD ¸í : %s Àå¸£ : %s ½Ã°£ : %s ÁÖ¿¬ : %s °¨µ¶ : %s Á¦ÀÛ»ç : %s µî·Ï¹øÈ£ : %d\n",p->data.name,p->data.genre,p->data.time,p->data.actor,p->data.direc,p->data.company,p->data.num);
+			printf("DVD ëª… : %s ì¥ë¥´ : %s ì‹œê°„ : %s ì£¼ì—° : %s ê°ë… : %s ì œì‘ì‚¬ : %s ë“±ë¡ë²ˆí˜¸ : %d\n",p->data.name,p->data.genre,p->data.time,p->data.actor,p->data.direc,p->data.company,p->data.num);
 		}
 	}
 }
@@ -339,7 +339,7 @@ void actor(DVD *h){
 	DVD *p,*o,*temp;
 	char name[20];
 	
-	printf("Ã£À» ÁÖ¿¬¹è¿ì¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ì°¾ì„ ì£¼ì—°ë°°ìš°ëª…ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 	scanf("%s",name); 
 	p=h;
 	while(p->link!=NULL){
@@ -365,7 +365,7 @@ void actorview(DVD *h,char *name){
 	while(p->link!=NULL){
 		p=p->link;
 		if(strcmp(p->data.actor,name)==0){
-			printf("DVD ¸í : %s Àå¸£ : %s ½Ã°£ : %s ÁÖ¿¬ : %s °¨µ¶ : %s Á¦ÀÛ»ç : %s µî·Ï¹øÈ£ : %d\n",p->data.name,p->data.genre,p->data.time,p->data.actor,p->data.direc,p->data.company,p->data.num);
+			printf("DVD ëª… : %s ì¥ë¥´ : %s ì‹œê°„ : %s ì£¼ì—° : %s ê°ë… : %s ì œì‘ì‚¬ : %s ë“±ë¡ë²ˆí˜¸ : %d\n",p->data.name,p->data.genre,p->data.time,p->data.actor,p->data.direc,p->data.company,p->data.num);
 		}
 	}
 }
@@ -375,7 +375,7 @@ void company(DVD *h){
 	DVD *p,*o,*temp;
 	char name[20];
 	
-	printf("Ã£À» Á¦ÀÛ»ç¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ì°¾ì„ ì œì‘ì‚¬ëª…ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 	scanf("%s",name);
 	 
 	p=h;
@@ -402,7 +402,7 @@ void companyview(DVD *h,char *name){
 	while(p->link!=NULL){
 		p=p->link;
 		if(strcmp(p->data.company,name)==0){
-			printf("DVD ¸í : %s Àå¸£ : %s ½Ã°£ : %s ÁÖ¿¬ : %s °¨µ¶ : %s Á¦ÀÛ»ç : %s µî·Ï¹øÈ£ : %d\n",p->data.name,p->data.genre,p->data.time,p->data.actor,p->data.direc,p->data.company,p->data.num);
+			printf("DVD ëª… : %s ì¥ë¥´ : %s ì‹œê°„ : %s ì£¼ì—° : %s ê°ë… : %s ì œì‘ì‚¬ : %s ë“±ë¡ë²ˆí˜¸ : %d\n",p->data.name,p->data.genre,p->data.time,p->data.actor,p->data.direc,p->data.company,p->data.num);
 		}
 	}
 }
@@ -413,15 +413,15 @@ void modiflist(DVD *h){
 	int i;
 	
 	p=h;
-	printf("Ã£À» DVD¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ì°¾ì„ DVDëª…ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 	scanf("%s",name); 
 	while(p->link!=NULL){
 		p=p->link;
 		if(strcmp(p->data.name,name)==0){
-			printf("DVD ¸í : %s Àå¸£ : %s ½Ã°£ : %s ÁÖ¿¬ : %s °¨µ¶ : %s Á¦ÀÛ»ç : %s µî·Ï¹øÈ£ : %d\n",p->data.name,p->data.genre,p->data.time,p->data.actor,p->data.direc,p->data.company,p->data.num);
+			printf("DVD ëª… : %s ì¥ë¥´ : %s ì‹œê°„ : %s ì£¼ì—° : %s ê°ë… : %s ì œì‘ì‚¬ : %s ë“±ë¡ë²ˆí˜¸ : %d\n",p->data.name,p->data.genre,p->data.time,p->data.actor,p->data.direc,p->data.company,p->data.num);
 		}
 	}
-	printf("¼öÁ¤ÇÒ DVDÀÇ µî·Ï¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ìˆ˜ì •í•  DVDì˜ ë“±ë¡ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 	scanf("%d",&i); 
 	
 	modif(h,i);
@@ -434,17 +434,17 @@ void modif(DVD *h,int i){
 	while(p->link!=NULL){
 		p=p->link;
 		if(i==p->data.num){
-			printf("DVD ¸í : ");
+			printf("DVD ëª… : ");
 			scanf("%s",p->data.name);
-			printf("Àå¸£ : ");
+			printf("ì¥ë¥´ : ");
 			scanf("%s",p->data.genre);
-			printf("½Ã°£ : ");
+			printf("ì‹œê°„ : ");
 			scanf("%s",p->data.time);
-			printf("ÁÖ¿¬ : ");
+			printf("ì£¼ì—° : ");
 			scanf("%s",p->data.actor);
-			printf("°¨µ¶ : ");
+			printf("ê°ë… : ");
 			scanf("%s",p->data.direc);
-			printf("Á¦ÀÛ»ç  : ");
+			printf("ì œì‘ì‚¬  : ");
 			scanf("%s",p->data.company);
 		}
 	}
@@ -456,22 +456,22 @@ void dellist(DVD *h){
 	int i,check=1;
 	
 	p=h;
-	printf("»èÁ¦ÇÒ DVD¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ì‚­ì œí•  DVDëª…ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 	scanf("%s",name); 
 	while(p->link!=NULL){
 		p=p->link;
 		if(strcmp(p->data.name,name)==0){
-			printf("DVD ¸í : %s Àå¸£ : %s ½Ã°£ : %s ÁÖ¿¬ : %s °¨µ¶ : %s Á¦ÀÛ»ç : %s µî·Ï¹øÈ£ : %d\n",p->data.name,p->data.genre,p->data.time,p->data.actor,p->data.direc,p->data.company,p->data.num);
+			printf("DVD ëª… : %s ì¥ë¥´ : %s ì‹œê°„ : %s ì£¼ì—° : %s ê°ë… : %s ì œì‘ì‚¬ : %s ë“±ë¡ë²ˆí˜¸ : %d\n",p->data.name,p->data.genre,p->data.time,p->data.actor,p->data.direc,p->data.company,p->data.num);
 			check=0;
 		}
 	}
 	if(check==0){
-		printf("»èÁ¦ÇÒ DVDÀÇ µî·Ï¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		printf("ì‚­ì œí•  DVDì˜ ë“±ë¡ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		scanf("%d",&i); 
 		del(h,i);
 	}
 	else{
-		printf("ÀÔ·ÂÇÏ½Å DVD¸íÀÌ ¾ø½À´Ï´Ù.\n");
+		printf("ì…ë ¥í•˜ì‹  DVDëª…ì´ ì—†ìŠµë‹ˆë‹¤.\n");
 	}
 	
 }
