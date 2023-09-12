@@ -21,7 +21,7 @@ int	row=sizeof(score)/sizeof(score[0]), col=sizeof(score[0])/sizeof(score[0][0])
 		if(a==1){
 			i=0; j=1;
 			if(b%2==1){
-				printf("(0,1) ¿ÞÂÊ\n");				
+				printf("(0,1) ì™¼ìª½\n");				
 				for(num=1; num<=9; num++){
 					score[i][j]=num;
 					if(i-1<0&&j-1<0){
@@ -58,7 +58,7 @@ int	row=sizeof(score)/sizeof(score[0]), col=sizeof(score[0])/sizeof(score[0][0])
 				}
 			}
 			else{
-				printf("(0,1) ¿À¸¥ÂÊ\n"); 
+				printf("(0,1) ì˜¤ë¥¸ìª½\n"); 
 				for(num=1; num<=9; num++){
 					
 					score[i][j]=num;
@@ -101,7 +101,7 @@ int	row=sizeof(score)/sizeof(score[0]), col=sizeof(score[0])/sizeof(score[0][0])
 		else{
 			i=2; j=1;
 			if(b%2==0){
-				printf("(2,1) ¿À¸¥ÂÊ\n"); 
+				printf("(2,1) ì˜¤ë¥¸ìª½\n"); 
 				for(num=1; num<=9; num++){
 					score[i][j]=num;
 					if(i+1>2&&j+1>2){
@@ -137,7 +137,7 @@ int	row=sizeof(score)/sizeof(score[0]), col=sizeof(score[0])/sizeof(score[0][0])
 				}
 			}
 			else{
-			printf("(2,1) ¿ÞÂÊ\n"); 
+			printf("(2,1) ì™¼ìª½\n"); 
 				for(num=1; num<=9; num++){	
 					score[i][j]=num;						
 					if(i+1>2&&j-1<0){
@@ -178,7 +178,7 @@ int	row=sizeof(score)/sizeof(score[0]), col=sizeof(score[0])/sizeof(score[0][0])
 		if(a==2){
 			i=1; j=0;
 			if(b%2==1){	
-				printf("(1,0) À§\n");			
+				printf("(1,0) ìœ„\n");			
 				for(num=1; num<=9; num++){
 					score[i][j]=num;
 					if(i-1<0&&j-1<0){
@@ -214,7 +214,7 @@ int	row=sizeof(score)/sizeof(score[0]), col=sizeof(score[0])/sizeof(score[0][0])
 				}
 			}
 			else{
-				printf("(1,0) ¾Æ·¡\n"); 
+				printf("(1,0) ì•„ëž˜\n"); 
 				for(num=1; num<=9; num++){	
 					score[i][j]=num;						
 					if(i+1>2&&j-1<0){
@@ -253,7 +253,7 @@ int	row=sizeof(score)/sizeof(score[0]), col=sizeof(score[0])/sizeof(score[0][0])
 		else{
 			i=1; j=2;
 			if(b%2==1){	
-				printf("(1,2) À§\n");
+				printf("(1,2) ìœ„\n");
 				for(num=1; num<=9; num++){
 				
 					score[i][j]=num;
@@ -293,7 +293,7 @@ int	row=sizeof(score)/sizeof(score[0]), col=sizeof(score[0])/sizeof(score[0][0])
 				}
 			}
 			else{
-				printf("(1,2) ¾Æ·¡\n"); 
+				printf("(1,2) ì•„ëž˜\n"); 
 				for(num=1; num<=9; num++){
 					score[i][j]=num;
 					if(i+1>2&&j+1>2){
