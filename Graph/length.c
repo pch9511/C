@@ -93,7 +93,7 @@ int main(int argc, char *argv[]) {
 		while(i==k){
 			k=rand()%8+0;
 		}
-		printf("%c ÀÇ ±æÀÌ : %d\n",H[i]->data,H[i]->len);
+		printf("%c ì˜ ê¸¸ì´ : %d\n",H[i]->data,H[i]->len);
 		if(i<7){
 			H[i]->left=H[i+1];	
 		}
@@ -102,18 +102,18 @@ int main(int argc, char *argv[]) {
 		}
 		H[i]->right=H[k];
 	}
-	printf("°æ·Î¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ê²½ë¡œë¥¼ ìž…ë ¥í•˜ì„¸ìš” : ");
 	scanf("%c %c",&start,&end);
 	printf("%c -> %c\n",start,end);
 	for(i=0; i<8; i++){
 		if(H[i]->data==start) break;
 	}	
-	printf("°æÀ¯Áö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ê²½ìœ ì§€ë¥¼ ìž…ë ¥í•˜ì„¸ìš” : ");
 	fflush(stdin);
 	scanf("%c",&pass);
 	p=H[i];
 	int min=0,num=0,cnt=0,pcheck=0;
-	printf("ÃÖ´Ü ·çÆ®: ");
+	printf("ìµœë‹¨ ë£¨íŠ¸: ");
 	p=H[i];
 	min=0;
 	num=0;
@@ -188,8 +188,8 @@ int main(int argc, char *argv[]) {
 		}
 	}
 	printf("\n");
-	printf("ÃÖ´Ü °Å¸® : %d\n",min);
-	printf("°æÀ¯ ·çÆ®: ");
+	printf("ìµœë‹¨ ê±°ë¦¬ : %d\n",min);
+	printf("ê²½ìœ  ë£¨íŠ¸: ");
 	p=H[i];
 	min=0;
 	num=0;
@@ -278,7 +278,7 @@ int main(int argc, char *argv[]) {
 			}			
 		}
 	}
-	printf("\n°æÀ¯ °Å¸® : %d",min); 
+	printf("\nê²½ìœ  ê±°ë¦¬ : %d",min); 
 	return 0;
 }
 STACK *create(){
