@@ -35,10 +35,10 @@ int main(int argc, char *argv[]) {
 	}	 
 	print(h);
 	while(1){
-		printf("¾ËÆÄºª ÀÔ·Â : ");
+		printf("ì•ŒíŒŒë²³ ì…ë ¥ : ");
 		scanf("%s",str); 
 		if(strlen(str)>7){
-			printf("Á¤·Ä ºÒ°¡\n");
+			printf("ì •ë ¬ ë¶ˆê°€\n");
 		}
 		else{
 			break;
@@ -134,7 +134,7 @@ void print(NODE *h){
 	
 	p=h;
 	if(p->link==NULL){
-		printf("°ªÀÌ ¾ø½À´Ï´Ù.\n"); 
+		printf("ê°’ì´ ì—†ìŠµë‹ˆë‹¤.\n"); 
 		return;	
 	}
 	else{
