@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 	}
 	levelorder(T);
 	while(1){
-	/*	printf("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	/*	printf("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		scanf("%d",&i);
 		if(i==-1) break;
 		if(check(T,i)!=-1){
@@ -33,10 +33,10 @@ int main(int argc, char *argv[]) {
 			levelorder(T);
 		}
 		else{
-			printf("Áßº¹ÀÔ´Ï´Ù\n");
+			printf("ì¤‘ë³µì…ë‹ˆë‹¤\n");
 		}*/
 		while(1){ 
-			printf("Áö¿ï ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+			printf("ì§€ìš¸ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 			scanf("%d",&i);
 			if(i==-1) break;
 			if(check(T,i)==-1){			
