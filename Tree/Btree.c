@@ -22,13 +22,13 @@ int main(int argc, char *argv[]) {
 	TREE *T,*p;
 	T=create();
 	while(1){
-		printf("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		printf("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		scanf("%d",&i); 
 		if(i==-1) break;	
 		insert(T,i);	
 		roundcheck(T);
 		levelorder(T);		
-		printf("»èÁ¦ÇÒ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		printf("ì‚­ì œí•  ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		scanf("%d",&j);
 		if(j!=-1){
 			del(T,j);
@@ -246,28 +246,28 @@ void Lround(TREE *T,int i){
 			p=p->right;
 		}
 		else{
-		//	printf("¿À±äÇØ? %d %d",o->data,p->data); 
-			if(p->left==NULL){  	//Á¤·ÄÀÌ ¾ÈµÇ¾îÀÖÀ»¶§ 
+		//	printf("ì˜¤ê¸´í•´? %d %d",o->data,p->data); 
+			if(p->left==NULL){  	//ì •ë ¬ì´ ì•ˆë˜ì–´ìˆì„ë•Œ 
 				p->left=p->right;
 				temp=p->data;
 				p->data=p->left->data;
 				p->left->data=temp;
 				p->right=NULL;
 			}
-			else if(Tcheck(o)!=0){ 						//³ª¸ÓÁö
+			else if(Tcheck(o)!=0){ 						//ë‚˜ë¨¸ì§€
 			//	printf("in");
 				if(Tcheck(o->left)!=0){
-				//	printf("µé¾î¿È2"); 
+				//	printf("ë“¤ì–´ì˜´2"); 
 					roundcheck(o);
 				}
 				else{
-				//	printf("µé¾î¿È"); 
+				//	printf("ë“¤ì–´ì˜´"); 
 					roundcheck(o);
 				//	levelorder(T);
 				}
 			}
 			else{
-			//	printf("µé¾î¿È3"); 
+			//	printf("ë“¤ì–´ì˜´3"); 
 				if(Tcheck(T->left)==0){
 					leftround(T);
 					roundcheck(T->right);
@@ -296,7 +296,7 @@ void Rround(TREE *T,int i){
 			p=p->right;
 		}
 		else{
-			if(p->left==NULL){  	//Á¤·ÄÀÌ ¾ÈµÇ¾îÀÖÀ»¶§ 
+			if(p->left==NULL){  	//ì •ë ¬ì´ ì•ˆë˜ì–´ìˆì„ë•Œ 
 				p->left=p->right;
 				temp=p->data;
 				p->data=p->left->data;
