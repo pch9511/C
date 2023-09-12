@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// ´ë<-h->¼Ò(26°³ Áßº¹ X ·£´ý) printf ´ë¹®ÀÚ-> ¿À¸¥ÂÊ print ¼Ò¹®ÀÚ ->¿ÞÂÊ   ´ë¹®ÀÚ ¼ø¼­¿¡ ¸ÂÃç¼­ ¼Ò¹®ÀÚ¿¡ ÀÖ´Â ¾ËÆÄºªÀ» Ã£¾Æ ÀÚ¸®¿¡ ¸ÂÃç¼­ ³Ö±â 
+// ëŒ€<-h->ì†Œ(26ê°œ ì¤‘ë³µ X ëžœë¤) printf ëŒ€ë¬¸ìž-> ì˜¤ë¥¸ìª½ print ì†Œë¬¸ìž ->ì™¼ìª½   ëŒ€ë¬¸ìž ìˆœì„œì— ë§žì¶°ì„œ ì†Œë¬¸ìžì— ìžˆëŠ” ì•ŒíŒŒë²³ì„ ì°¾ì•„ ìžë¦¬ì— ë§žì¶°ì„œ ë„£ê¸° 
 typedef struct NODE{
 	char data;
 	struct NODE *Llink;
