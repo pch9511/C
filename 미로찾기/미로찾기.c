@@ -9,8 +9,8 @@ typedef struct stack{
 	a data;
 	struct stack *link;
 }ST;
-//int **ap -> 7~10 ·£´ı => ex.7*7 60%=1->°ËÀº Å¸ÀÏ 40%=0->Èò Å¸ÀÏ  0->2(º°)½ºÅ¸Æ®Á¡ 0->3(ÇÏÆ®)¿£µå  
-//½ºÅÃ (Çà,¿­)·Î ´ã±â  º° ½ºÅ¸Æ®Á¡ °¥¸²±æÀÌ¶ó¸é(push) ÀÌÈÄ-> ÇÏÆ®¿Í °¡±î¿î ¹æÇâÀ¸·Î (push) °¬´ø±æÀº °è¼Ó Ç¥½Ã (´Ù½Ã ¸ø°¨) 4¹æÀÌ ´Ù¸·È÷¸é popÇÏ°í pop Àå¼Ò·Î ´Ù½Ã ¿øÁ¡
+//int **ap -> 7~10 ëœë¤ => ex.7*7 60%=1->ê²€ì€ íƒ€ì¼ 40%=0->í° íƒ€ì¼  0->2(ë³„)ìŠ¤íƒ€íŠ¸ì  0->3(í•˜íŠ¸)ì—”ë“œ  
+//ìŠ¤íƒ (í–‰,ì—´)ë¡œ ë‹´ê¸°  ë³„ ìŠ¤íƒ€íŠ¸ì  ê°ˆë¦¼ê¸¸ì´ë¼ë©´(push) ì´í›„-> í•˜íŠ¸ì™€ ê°€ê¹Œìš´ ë°©í–¥ìœ¼ë¡œ (push) ê°”ë˜ê¸¸ì€ ê³„ì† í‘œì‹œ (ë‹¤ì‹œ ëª»ê°) 4ë°©ì´ ë‹¤ë§‰íˆë©´ popí•˜ê³  pop ì¥ì†Œë¡œ ë‹¤ì‹œ ì›ì 
 
 
 void map(int **,int);
@@ -45,14 +45,14 @@ int main(int argc, char *argv[]){
 			}
 		}
 	}
-	/*while(1){  ¹Ì·ÎÃ£±â 
+	/*while(1){  ë¯¸ë¡œì°¾ê¸° 
 		sleep(1);
 		system("cls");	
 		i=move(ap,h,rnd);
 		print(ap,rnd);
 		printf("\n"); 
 		if(i==2){
-			printf("¸·Èû");	
+			printf("ë§‰í˜");	
 			h2=pop(h);	
 			ap[h2->row][h2->col]=2;
 		}
@@ -60,14 +60,14 @@ int main(int argc, char *argv[]){
 			break;
 		}
 	}*/
-	while(1){  //ÃÖ´Ü°Å¸® Ã£±â   -> µµÂøÁöÁ¡¿¡ µµÂøÇÒ¶§±îÁöÀÇ È½¼ö¸¦ Ã¼Å©(ÀÌµ¿¹æÇâÀº ¾î¶»°Ô ¼³Á¤?) -> È½¼ö ºñ±³ÈÄ °¡Àå ÀÛÀº È½¼öÀÇ ·çÆ®¸¦ print½ÃÅ´(·çÆ®µéÀº ¾î¶»°Ô ÀúÀå?)  
+	while(1){  //ìµœë‹¨ê±°ë¦¬ ì°¾ê¸°   -> ë„ì°©ì§€ì ì— ë„ì°©í• ë•Œê¹Œì§€ì˜ íšŸìˆ˜ë¥¼ ì²´í¬(ì´ë™ë°©í–¥ì€ ì–´ë–»ê²Œ ì„¤ì •?) -> íšŸìˆ˜ ë¹„êµí›„ ê°€ì¥ ì‘ì€ íšŸìˆ˜ì˜ ë£¨íŠ¸ë¥¼ printì‹œí‚´(ë£¨íŠ¸ë“¤ì€ ì–´ë–»ê²Œ ì €ì¥?)  
 		sleep(1);
 		system("cls");	
 		i=move2(ap,h,rnd);
 		print(ap,rnd);
 		printf("\n"); 
 		if(i==2){
-			printf("¸·Èû");		
+			printf("ë§‰í˜");		
 			while(isempty(h)!=0){	
 				h2=pop(h);
 			}
@@ -98,8 +98,8 @@ void map(int **ap,int rnd){
 	int rnd2,i,j,res,res2,cnt=0,cnt2=0,rnd3,rnd4;
 	double a,b;
 
-	a=rnd*rnd*0.2; //º® 
-	b=rnd*rnd*0.8; //Åë·Î 
+	a=rnd*rnd*0.2; //ë²½ 
+	b=rnd*rnd*0.8; //í†µë¡œ 
 	if(a-(int)a>=0.5){
 		res=(int)a+1;
 	}
@@ -153,19 +153,19 @@ void map(int **ap,int rnd){
 	for(i=0; i<rnd; i++){
  		for(j=0; j<rnd; j++){
  			if(ap[i][j]==1){
- 				printf("¡á");
+ 				printf("â– ");
  			}
  			else if(ap[i][j]==0){
- 				printf("¡à");
+ 				printf("â–¡");
 			}
 			else if(ap[i][j]==2){
-				printf("¡Ú");
+				printf("â˜…");
 			}
 			else if(ap[i][j]==3){
-				printf("¢¾");
+				printf("â™¥");
 			}  
 			else if(ap[i][j]==4){
-				printf("¡Ş");
+				printf("â—‡");
 			}
  		}
  		printf("\n");
@@ -225,29 +225,29 @@ int move(int **ap,ST *h,int rnd,a *h2){
 			}
 		}
 	}
-	printf("º° : (%d,%d)\n",a,b); 
+	printf("ë³„ : (%d,%d)\n",a,b); 
 		if(a<rnd-1&&ap[a+1][b]==3){
 			ap[a][b]=4;
 			ap[a+1][b]=2;
-			printf("µµÂø\n"); 
+			printf("ë„ì°©\n"); 
 			return -1;
 		}
 		else if(b>0&&ap[a][b-1]==3){
 			ap[a][b]=4;
 			ap[a][b-1]=2;
-			printf("µµÂø\n");
+			printf("ë„ì°©\n");
 			return -1;
 		}
 		else if(b<rnd-1&&ap[a][b+1]==3){
 			ap[a][b]=4;
 			ap[a][b+1]=2;
-			printf("µµÂø\n");
+			printf("ë„ì°©\n");
 			return -1;
 		}
 		else if(a>0&&ap[a-1][b]==3){
 			ap[a][b]=4;
 			ap[a-1][b]=2;
-			printf("µµÂø\n");
+			printf("ë„ì°©\n");
 			return -1;
 		}
 		/*if(b>0&&ap[a][b-1]==0){
@@ -284,7 +284,7 @@ int move(int **ap,ST *h,int rnd,a *h2){
 			}
 			else{
 				if(isempty(h)==0){
-					printf("°¥ °÷ÀÌ ¾øÀ½\n");
+					printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 					return -1;
 				}
 				else{	
@@ -312,7 +312,7 @@ int move(int **ap,ST *h,int rnd,a *h2){
 			}	
 			else{ 
 				if(isempty(h)==0){
-					printf("°¥ °÷ÀÌ ¾øÀ½\n");
+					printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 					return -1;
 				}
 				else{
@@ -340,7 +340,7 @@ int move(int **ap,ST *h,int rnd,a *h2){
 			}
 			else{ 
 				if(isempty(h)==0){
-					printf("°¥ °÷ÀÌ ¾øÀ½\n");
+					printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 					return -1;
 				}
 				else{
@@ -368,7 +368,7 @@ int move(int **ap,ST *h,int rnd,a *h2){
 			}		
 			else{ 
 				if(isempty(h)==0){
-					printf("°¥ °÷ÀÌ ¾øÀ½\n");
+					printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 					return -1;
 				}
 				else{
@@ -396,7 +396,7 @@ int move(int **ap,ST *h,int rnd,a *h2){
 			}			
 			else{ 
 				if(isempty(h)==0){
-				printf("°¥ °÷ÀÌ ¾øÀ½\n");
+				printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 				return -1;
 				}
 				else {
@@ -424,7 +424,7 @@ int move(int **ap,ST *h,int rnd,a *h2){
 			}	
 			else{ 
 				if(isempty(h)==0){
-					printf("°¥ °÷ÀÌ ¾øÀ½\n");
+					printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 					return -1;
 				}
 				else{
@@ -452,7 +452,7 @@ int move(int **ap,ST *h,int rnd,a *h2){
 			}			
 			else{ 
 				if(isempty(h)==0){
-					printf("°¥ °÷ÀÌ ¾øÀ½\n");
+					printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 					return -1;
 				}
 				else{
@@ -480,7 +480,7 @@ int move(int **ap,ST *h,int rnd,a *h2){
 			}			
 			else{ 
 				if(isempty(h)==0){
-				printf("°¥ °÷ÀÌ ¾øÀ½\n");
+				printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 				return -1;
 				}
 				else{
@@ -497,22 +497,22 @@ void print(int **ap,int rnd){
 	for(i=0; i<rnd; i++){
  		for(j=0; j<rnd; j++){
  			if(ap[i][j]==1){
- 				printf("¡á");
+ 				printf("â– ");
  			}
  			else if(ap[i][j]==0){
- 				printf("¡à");
+ 				printf("â–¡");
 			}
 			else if(ap[i][j]==2){
-				printf("¡Ú");
+				printf("â˜…");
 			}
 			else if(ap[i][j]==3){
-				printf("¢¾");
+				printf("â™¥");
 			}  
 			else if(ap[i][j]==4){
-				printf("¡Ş");
+				printf("â—‡");
 			}
 			else if(ap[i][j]==5){
-				printf("¡Ü"); 
+				printf("â—"); 
 			}
  		}
  		printf("\n");
@@ -539,29 +539,29 @@ int move2(int **ap,ST *h,int rnd){
 		}
 	}
 	push(h,a,b);
-	printf("º° : (%d,%d)\n",a,b); 
+	printf("ë³„ : (%d,%d)\n",a,b); 
 		if(a<rnd-1&&ap[a+1][b]==3){
 			ap[a][b]=4;
 			ap[a+1][b]=2;
-			printf("µµÂø\n"); 
+			printf("ë„ì°©\n"); 
 			return -1;
 		}
 		else if(b>0&&ap[a][b-1]==3){
 			ap[a][b]=4;
 			ap[a][b-1]=2;
-			printf("µµÂø\n");
+			printf("ë„ì°©\n");
 			return -1;
 		}
 		else if(b<rnd-1&&ap[a][b+1]==3){
 			ap[a][b]=4;
 			ap[a][b+1]=2;
-			printf("µµÂø\n");
+			printf("ë„ì°©\n");
 			return -1;
 		}
 		else if(a>0&&ap[a-1][b]==3){
 			ap[a][b]=4;
 			ap[a-1][b]=2;
-			printf("µµÂø\n");
+			printf("ë„ì°©\n");
 			return -1;
 		}
 		/*if(b>0&&ap[a][b-1]==0){
@@ -598,7 +598,7 @@ int move2(int **ap,ST *h,int rnd){
 			}
 			else{
 				if(isempty(h)==0){
-					printf("°¥ °÷ÀÌ ¾øÀ½\n");
+					printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 					return -1;
 				}
 				else{	
@@ -626,7 +626,7 @@ int move2(int **ap,ST *h,int rnd){
 			}	
 			else{ 
 				if(isempty(h)==0){
-					printf("°¥ °÷ÀÌ ¾øÀ½\n");
+					printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 					return -1;
 				}
 				else{
@@ -654,7 +654,7 @@ int move2(int **ap,ST *h,int rnd){
 			}
 			else{ 
 				if(isempty(h)==0){
-					printf("°¥ °÷ÀÌ ¾øÀ½\n");
+					printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 					return -1;
 				}
 				else{
@@ -683,7 +683,7 @@ int move2(int **ap,ST *h,int rnd){
 			}		
 			else{ 
 				if(isempty(h)==0){
-					printf("°¥ °÷ÀÌ ¾øÀ½\n");
+					printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 					return -1;
 				}
 				else{
@@ -711,7 +711,7 @@ int move2(int **ap,ST *h,int rnd){
 			}			
 			else{ 
 				if(isempty(h)==0){
-				printf("°¥ °÷ÀÌ ¾øÀ½\n");
+				printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 				return -1;
 				}
 				else {
@@ -739,7 +739,7 @@ int move2(int **ap,ST *h,int rnd){
 			}	
 			else{ 
 				if(isempty(h)==0){
-					printf("°¥ °÷ÀÌ ¾øÀ½\n");
+					printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 					return -1;
 				}
 				else{
@@ -767,7 +767,7 @@ int move2(int **ap,ST *h,int rnd){
 			}			
 			else{ 
 				if(isempty(h)==0){
-					printf("°¥ °÷ÀÌ ¾øÀ½\n");
+					printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 					return -1;
 				}
 				else{
@@ -795,7 +795,7 @@ int move2(int **ap,ST *h,int rnd){
 			}			
 			else{ 
 				if(isempty(h)==0){
-				printf("°¥ °÷ÀÌ ¾øÀ½\n");
+				printf("ê°ˆ ê³³ì´ ì—†ìŒ\n");
 				return -1;
 				}
 				else{
